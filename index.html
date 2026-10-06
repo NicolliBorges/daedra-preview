@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daedra Tattoo — tattoo autoral e flash em Curitiba, por Flavia Carvalho (prévia Kodra)</title>
+<meta name="description" content="Prévia de site criada pela Kodra para o Daedra Tattoo — estúdio privado de tatuagem da Flavia Carvalho no Capão da Imbuia, Curitiba/PR. Tattoo autoral, flashes e coberturas, com orçamento pelo WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2e1437">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daedra Tattoo — prévia de site">
+<meta property="og:description" content="Tattoo autoral, flashes e coberturas com a Flavia Carvalho, em Curitiba/PR. Prévia criada pela Kodra.">
+<meta property="og:image" content="https://nicolliborges.github.io/daedra-preview/img/og.jpg">
+<meta property="og:url" content="https://nicolliborges.github.io/daedra-preview/">
+<link rel="preload" href="assets/pacifico.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/nunito-regular.woff" as="font" type="font/woff" crossorigin>
+<style>
+@font-face{font-family:"Pacifico";src:url(assets/pacifico.woff) format("woff");font-display:swap}
+@font-face{font-family:"Lobster";src:url(assets/lobster.woff) format("woff");font-display:swap}
+@font-face{font-family:"Nunito";src:url(assets/nunito-regular.woff) format("woff");font-weight:500;font-display:swap}
+@font-face{font-family:"Nunito";src:url(assets/nunito-bold.woff) format("woff");font-weight:800;font-display:swap}
+:root{
+  --ink:#2e1437;--ink2:#5a3a63;
+  --pink:#ff4f93;--pink2:#d2176a;--rose:#ffc6da;--blush:#ffe6ee;
+  --teal:#12b0aa;--teal2:#0a7a80;--mint:#e3f6f1;
+  --lilac:#cfc9f5;--sky:#bfd3f3;--cream:#fff8f1;--yel:#ffd34d;--red:#c9142f;
+  --script:"Pacifico","Brush Script MT",cursive;--body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --strip:34px;--gut:clamp(18px,4.4vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-weight:500;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0;padding:0}
+ul,ol{list-style:none}
+b,strong{font-weight:800}
+main{overflow-x:clip;padding-top:var(--strip)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* faixa Kodra */
+.kodra{position:fixed;inset:0 0 auto 0;height:var(--strip);z-index:90;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 var(--gut);font-weight:800;font-size:12.5px;letter-spacing:.04em;white-space:nowrap}
+.kodra a{text-decoration:none;color:var(--rose)}
+.kodra a:hover{color:#fff}
+
+/* lettering com contorno e volume, como nas capas dela */
+.let{font-family:var(--script);font-weight:400;line-height:1.12;color:#fff;position:relative;display:inline-block;isolation:isolate;white-space:nowrap;padding:.06em .14em .2em;--sw:.13em;--c1:var(--pink);--c2:var(--pink2);--ex:1}
+.let::before,.let::after{content:attr(data-t);position:absolute;left:0;top:0;padding:inherit;white-space:nowrap;pointer-events:none}
+.let::before{z-index:-1;color:var(--c1);-webkit-text-stroke:var(--sw) var(--c1);text-shadow:calc(var(--ex)*.035em) calc(var(--ex)*.045em) 0 var(--c2)}
+.let::after{z-index:-2;color:var(--c2);-webkit-text-stroke:var(--sw) var(--c2);transform:translate(calc(var(--ex)*.07em),calc(var(--ex)*.09em))}
+.let--teal{--c1:var(--teal);--c2:var(--teal2)}
+.let--red{font-family:"Lobster",var(--script);--c1:var(--red);--c2:#7d0b1f}
+
+/* botões-adesivo */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:800;font-size:16px;line-height:1;text-decoration:none;color:#fff;background:var(--pink);border:2.5px solid var(--ink);border-radius:999px;padding:15px 22px;box-shadow:4px 5px 0 var(--ink);transition:transform .18s,box-shadow .18s;cursor:pointer}
+.btn:hover{transform:translate(-1px,-2px);box-shadow:6px 8px 0 var(--ink)}
+.btn:active{transform:translate(3px,4px);box-shadow:1px 1px 0 var(--ink)}
+.btn--teal{background:var(--teal)}
+.btn--ghost{background:#fff;color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* janelinha retrô dos posts de informação */
+.win{background:#fffdf9;border:2.5px solid var(--ink);border-radius:12px;box-shadow:6px 7px 0 var(--ink);overflow:hidden}
+.win__bar{display:flex;align-items:center;gap:6px;background:var(--rose);border-bottom:2.5px solid var(--ink);padding:7px 10px;font-weight:800;font-size:13px;letter-spacing:.02em}
+.win__bar span{margin-right:auto}
+.win__bar i{width:14px;height:14px;border:2px solid var(--ink);border-radius:3px;background:#fff}
+.win__bar i:last-child{background:var(--pink)}
+.win__body{padding:clamp(16px,2.4vw,26px)}
+.win--mint .win__bar{background:#a9e8e1}
+.win--yel .win__bar{background:var(--yel)}
+
+.src{font-size:13px;color:var(--ink2);margin-top:18px}
+.quote{font-size:clamp(18px,1.55vw,21px);line-height:1.5}
+.stk{position:absolute;pointer-events:none;filter:drop-shadow(2px 3px 0 rgba(46,20,55,.22))}
+.wave{display:block;width:100%;height:clamp(26px,4vw,56px);margin-bottom:-1px}
+
+/* ───── abertura ───── */
+.hero{position:relative;min-height:calc(100svh - var(--strip));display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:center;gap:clamp(20px,3vw,50px);padding:clamp(28px,5vh,60px) var(--gut) clamp(50px,8vh,90px);
+  background:
+   radial-gradient(60% 46% at 18% 12%,#fff 0,rgba(255,255,255,0) 70%),
+   radial-gradient(46% 40% at 88% 84%,#ffd2e3 0,rgba(255,210,227,0) 72%),
+   radial-gradient(40% 36% at 70% 8%,#c7efe9 0,rgba(199,239,233,0) 70%),
+   linear-gradient(170deg,#cfd0f6 0%,#e6cff2 44%,#ffd0e0 100%)}
+.hero__tag{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-weight:800;font-size:13.5px;transform:rotate(-2deg)}
+.hero h1{margin:.1em 0 0 -.06em;font-size:clamp(84px,12.4vw,200px)}
+.hero h1 .let{--sw:.11em}
+.hero__say{display:inline-block;margin:-.4em 0 0 clamp(8px,6vw,110px);background:var(--yel);border:2px solid var(--ink);border-radius:10px;padding:5px 12px;font-weight:800;font-size:14.5px;transform:rotate(3deg);position:relative;z-index:2}
+.hero__bio{max-width:30em;margin-top:22px;font-size:clamp(17px,1.45vw,20.5px)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.fan{position:relative;height:min(74svh,640px);min-height:380px}
+.fan figure{position:absolute;width:46%;aspect-ratio:4/5;border:9px solid #fff;border-radius:18px;overflow:hidden;box-shadow:0 2px 0 rgba(46,20,55,.15),8px 14px 30px rgba(46,20,55,.28);background:#fff}
+.fan img{width:100%;height:100%;object-fit:cover}
+.fan .c1{left:2%;top:4%;transform:rotate(-8deg)}
+.fan .c2{right:0;top:16%;transform:rotate(6deg);z-index:2}
+.fan .c3{left:20%;bottom:0;transform:rotate(-2deg);z-index:3}
+.hero .s1{width:74px;right:44%;top:6%}
+.hero .s2{width:52px;left:47%;bottom:4%}
+.hero .s3{width:40px;right:3%;top:8%}
+
+/* ───── quem é ───── */
+.about{position:relative;background:var(--mint);padding:clamp(40px,7vw,96px) var(--gut) clamp(56px,8vw,110px)}
+.about__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(26px,5vw,80px);align-items:start;max-width:1240px;margin:0 auto}
+.about__pic{border:9px solid #fff;border-radius:20px;overflow:hidden;transform:rotate(-2.5deg);box-shadow:8px 14px 30px rgba(46,20,55,.22);position:sticky;top:calc(var(--strip) + 26px)}
+.about__pic img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:100% 50%}
+.about h2{font-size:clamp(50px,6.4vw,96px);margin-left:-.1em}
+.about .quote{margin-top:14px;max-width:34em}
+.jobs{display:flex;flex-wrap:wrap;gap:9px 8px;margin:22px 0 6px;max-width:36em}
+.jobs li{background:#fff;border:2px solid var(--ink);border-radius:999px;padding:5px 13px;font-weight:800;font-size:15px;box-shadow:2px 3px 0 var(--ink)}
+.jobs li:nth-child(3n+1){transform:rotate(-2deg)}
+.jobs li:nth-child(3n+2){transform:rotate(1.5deg);background:var(--blush)}
+.jobs li:nth-child(4n){background:#d6f3ef}
+.jobs li.is{background:var(--pink);color:#fff;font-size:17px;transform:rotate(-3deg)}
+.about__cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.about__cols p{font-size:16px}
+.about__cols p+p{margin-top:.7em}
+
+/* ───── carrossel contínuo ───── */
+.pano{position:relative;background:linear-gradient(180deg,#d9d6f7,#f6cfe0)}
+.pano--red{background:linear-gradient(180deg,#f6c3d2,#e9a3bb)}
+.pano__stick{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:18px 0 16px;--sh:clamp(260px,calc(100svh - var(--strip) - 190px),760px)}
+.js .pano__stick{position:sticky;top:var(--strip);height:calc(100svh - var(--strip));overflow:hidden}
+.pano__head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:0 var(--gut)}
+.pano__head h2{font-size:clamp(17px,1.7vw,24px);font-weight:800;line-height:1.3;max-width:30em}
+.pano__head h2 small{display:block;font-size:13px;font-weight:800;color:var(--pink2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+.pano--red .pano__head h2 small{color:#8e0f25}
+.pano__n{flex:none;font-weight:800;font-size:14px;background:var(--ink);color:#fff;border-radius:999px;padding:5px 12px;font-variant-numeric:tabular-nums}
+.pano__win{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.pano__win::-webkit-scrollbar{display:none}
+.js .pano__win{overflow:hidden}
+.pano__track{display:flex;width:max-content;padding:0 var(--gut);will-change:transform}
+.pano__track img{flex:none;height:var(--sh);width:calc(var(--sh)*.8);object-fit:cover;background:#f3dbe6}
+.pano__track img:first-child{border-radius:18px 0 0 18px}
+.pano__track img:nth-last-child(2){border-radius:0 18px 18px 0}
+.pano__end{flex:none;width:min(78vw,340px);height:var(--sh);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:16px;padding-left:clamp(22px,3vw,44px)}
+.pano__end p{font-weight:800;font-size:19px;line-height:1.3}
+.pano__foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 var(--gut)}
+.pano__dots{display:flex;gap:6px}
+.pano__dots i{width:8px;height:8px;border-radius:50%;background:rgba(46,20,55,.25);transition:transform .25s,background .25s}
+.pano__dots i.on{background:var(--pink);transform:scale(1.45)}
+.pano--red .pano__dots i.on{background:var(--red)}
+.pano__hint{font-size:13.5px;font-weight:800;color:var(--ink2)}
+
+/* ───── flashes ───── */
+.flash{position:relative;background:var(--blush);padding:clamp(46px,7vw,100px) var(--gut) clamp(56px,8vw,110px)}
+.flash__in{max-width:1240px;margin:0 auto}
+.flash__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,60px);align-items:end}
+.flash h2{font-size:clamp(54px,7vw,104px);margin-left:-.1em}
+.flash__top .quote{max-width:30em}
+.flash__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,26px);margin-top:clamp(28px,4vw,54px)}
+.flash__grid figure{border:8px solid #fff;border-radius:16px;overflow:hidden;background:#fff;box-shadow:6px 10px 24px rgba(46,20,55,.2);transition:transform .25s}
+.flash__grid figure:nth-child(1){transform:rotate(-3deg)}
+.flash__grid figure:nth-child(2){transform:rotate(2deg) translateY(14px)}
+.flash__grid figure:nth-child(3){transform:rotate(-1.5deg)}
+.flash__grid figure:nth-child(4){transform:rotate(3deg) translateY(10px)}
+.flash__grid img{width:100%;aspect-ratio:807/1000;object-fit:cover}
+.peq{display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:clamp(18px,4vw,56px);align-items:center;margin-top:clamp(44px,6vw,84px)}
+.peq__rule{width:100%;max-width:430px}
+.peq__rule svg{display:block;width:100%;height:auto;overflow:visible}
+.peq h3{font-size:clamp(22px,2.3vw,32px);font-weight:800;line-height:1.2}
+.peq p{margin-top:8px;max-width:30em}
+.peq .btn{margin-top:18px}
+
+/* ───── orçamento ───── */
+.orc{position:relative;background:var(--mint);padding:clamp(46px,7vw,100px) var(--gut) clamp(60px,8vw,110px)}
+.orc__in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(26px,4.4vw,70px);align-items:start}
+.orc h2{font-size:clamp(54px,6.6vw,100px);margin-left:-.1em}
+.orc__lead{margin-top:10px;max-width:32em}
+form{margin-top:26px;display:grid;gap:24px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.lbl{display:block;padding:0;font-weight:800;font-size:16.5px;margin-bottom:10px}
+legend small,.lbl small{font-weight:500;color:var(--ink2);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chips span{display:block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:9px 15px;font-weight:800;font-size:15px;line-height:1.1;transition:transform .15s,background .15s,box-shadow .15s}
+.chips input:checked+span{background:var(--pink);color:#fff;box-shadow:3px 4px 0 var(--ink);transform:translate(-1px,-2px) rotate(-1.5deg)}
+.chips input:focus-visible+span{outline:3px solid var(--teal2);outline-offset:2px}
+.size{display:flex;align-items:center;gap:18px}
+.size output{flex:none;min-width:3.6em;font-family:var(--script);font-size:34px;line-height:1;color:var(--pink2);text-align:right}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:12px;border-radius:999px;border:2px solid var(--ink);background:repeating-linear-gradient(90deg,#fff 0 11px,var(--rose) 11px 13px)}
+input[type=range]::-moz-range-track{height:10px;border-radius:999px;border:2px solid var(--ink);background:#fff}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:var(--teal);border:2.5px solid var(--ink);box-shadow:2px 3px 0 var(--ink)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--teal);border:2.5px solid var(--ink)}
+input[type=range]:disabled{opacity:.55}
+textarea{width:100%;min-height:96px;resize:vertical;font:inherit;color:inherit;background:#fff;border:2px solid var(--ink);border-radius:14px;padding:12px 14px}
+textarea:focus{outline:3px solid var(--teal);outline-offset:1px}
+.orc__side{display:grid;gap:26px;position:sticky;top:calc(var(--strip) + 22px)}
+.bubble{background:#dcf8c6;border-radius:4px 14px 14px 14px;padding:12px 14px;font-size:15px;line-height:1.45;white-space:pre-wrap;word-break:break-word;min-height:9em}
+.send{margin-top:16px;width:100%;justify-content:center;background:#1faa59}
+.note{font-size:14px;color:var(--ink2);margin-top:12px}
+.hrs{display:grid;gap:8px;font-size:15.5px}
+.hrs div{display:flex;justify-content:space-between;gap:12px;border-bottom:2px dotted rgba(46,20,55,.3);padding-bottom:6px}
+.hrs b{white-space:nowrap}
+.tips{margin-top:14px;display:grid;gap:7px;font-size:15px}
+.tips li{padding-left:22px;position:relative}
+.tips li::before{content:"✶";position:absolute;left:0;color:var(--pink2);font-weight:800}
+
+/* ───── avaliações ───── */
+.rev{position:relative;background:linear-gradient(180deg,#d6d3f7,#e9d6f5);padding:clamp(46px,7vw,100px) var(--gut) clamp(60px,8vw,110px)}
+.rev__in{max-width:1240px;margin:0 auto}
+.rev__top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 30px}
+.rev h2{font-size:clamp(46px,5.6vw,86px);margin-left:-.1em}
+.rev__score{font-weight:800;font-size:16px;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:8px 16px;transform:rotate(1.5deg)}
+.rev__score b{color:var(--pink2)}
+.rev__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,30px);margin-top:clamp(26px,3.6vw,46px);align-items:start}
+.rev blockquote{position:relative;background:#fff;border-radius:26px;padding:22px 22px 20px;filter:drop-shadow(5px 8px 0 rgba(46,20,55,.16));font-size:16px}
+.rev blockquote::after{content:"";position:absolute;left:38px;bottom:-10px;width:24px;height:24px;background:#fff;border-radius:4px;transform:rotate(45deg) skew(12deg,12deg)}
+.rev blockquote:nth-child(2){margin-top:28px}
+.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:800;font-size:14.5px;color:var(--pink2)}
+
+/* ───── rodapé ───── */
+.foot{background:var(--ink);color:#fff;padding:clamp(40px,6vw,80px) var(--gut) 30px}
+.foot__in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:30px 60px;align-items:end}
+.foot h2{font-size:clamp(46px,5.4vw,82px);margin-left:-.1em}
+.foot p{margin-top:8px;max-width:30em;color:#eadff0}
+.foot ul{display:grid;gap:8px;font-weight:800}
+.foot ul a{text-decoration:none;border-bottom:2px solid var(--pink)}
+.foot ul a:hover{color:var(--rose)}
+.foot__k{max-width:1240px;margin:40px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12.5px;color:#cbbbd4}
+
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:80;display:none;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;pointer-events:none}
+.fab.on{opacity:1;transform:none;pointer-events:auto}
+
+@media (max-width:759px){
+  body{font-size:16px}
+  .kodra{justify-content:center;font-size:11.5px;letter-spacing:.02em}
+  .kodra a{display:none}
+  .hero{grid-template-columns:minmax(0,1fr);gap:8px;padding-top:26px;min-height:0}
+  .hero h1{font-size:clamp(78px,27vw,128px)}
+  .hero__say{margin-left:30vw}
+  .fan{order:2;height:auto;min-height:0;aspect-ratio:1/.92;margin-top:22px}
+  .fan figure{width:50%;border-width:6px;border-radius:14px}
+  .fan .c1{left:0;top:2%}
+  .fan .c2{right:0;top:8%}
+  .fan .c3{left:24%;bottom:0}
+  .hero .s1{width:42px;right:2.5%;top:1.2%}
+  .hero .s2{display:none}
+  .hero .s3{width:30px;right:4%;top:36%}
+  .about__grid{grid-template-columns:minmax(0,1fr)}
+  .about__pic{position:relative;top:auto;max-width:300px;margin:0 auto}
+  .about__cols{grid-template-columns:minmax(0,1fr)}
+  .pano__stick{--sh:min(calc(100svh - var(--strip) - 176px),112vw);gap:12px;padding:14px 0}
+  .pano__head{align-items:flex-start}
+  .pano__hint{font-size:12.5px}
+  .pano__foot{flex-direction:column;align-items:flex-start;gap:8px;padding-right:150px}
+  .flash__top{grid-template-columns:minmax(0,1fr);gap:8px}
+  .flash__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+  .flash__grid figure{border-width:6px}
+  .peq{grid-template-columns:minmax(0,1fr)}
+  .orc__in{grid-template-columns:minmax(0,1fr)}
+  .orc__side{position:static}
+  .rev__grid{grid-template-columns:minmax(0,1fr);gap:30px}
+  .rev blockquote:nth-child(2){margin-top:0}
+  .foot__in{grid-template-columns:minmax(0,1fr)}
+  .fab{display:inline-flex}
+}
+@media (min-width:760px) and (max-height:560px){
+  .hero h1{font-size:clamp(84px,min(12.4vw,30svh),200px)}
+  .fan{height:74svh;min-height:300px}
+  .hero__bio{margin-top:12px}
+  .hero__cta{margin-top:16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="kodra"><span>Prévia criada pela Kodra para Daedra Tattoo</span><a href="https://kodratecnologia.com.br" target="_blank" rel="noopener">kodratecnologia.com.br ↗</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sak" viewBox="-36 -36 72 72">
+      <g stroke="#fff" stroke-width="7" stroke-linejoin="round" fill="#fff">
+        <path id="pt" d="M0 -3C-11 -9 -13 -24 -4 -31L0 -27L4 -31C13 -24 11 -9 0 -3Z"/>
+        <use href="#pt" transform="rotate(72)"/><use href="#pt" transform="rotate(144)"/><use href="#pt" transform="rotate(216)"/><use href="#pt" transform="rotate(288)"/>
+      </g>
+      <g fill="#ff8fb8" stroke="#d2176a" stroke-width="1.6" stroke-linejoin="round">
+        <use href="#pt"/><use href="#pt" transform="rotate(72)"/><use href="#pt" transform="rotate(144)"/><use href="#pt" transform="rotate(216)"/><use href="#pt" transform="rotate(288)"/>
+      </g>
+      <circle r="4.6" fill="#ffd34d" stroke="#d2176a" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="spk" viewBox="-20 -20 40 40">
+      <path d="M0 -17C2 -6 6 -2 17 0C6 2 2 6 0 17C-2 6 -6 2 -17 0C-6 -2 -2 -6 0 -17Z" fill="#ffd34d" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke"/>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round" d="M12 3a9 9 0 0 0-7.800 13.500L3 21l4.700-1.200A9 9 0 1 0 12 3z"/><path fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" d="M8.800 9.200c.300 3 2.700 5.500 5.900 6"/></symbol>
+  </defs>
+</svg>
+
+<main>
+<!-- ───────── abertura ───────── -->
+<section class="hero" id="topo">
+  <div class="hero__txt">
+    <span class="hero__tag" data-in>Estúdio privado de tatuagem · Curitiba/PR</span>
+    <h1><span class="let" data-t="Daedra" data-let="load">Daedra</span><span class="sr"> Tattoo</span></h1>
+    <span class="hero__say" data-in>lê-se “da-é-dra”</span>
+    <p class="hero__bio" data-in><b>Flavia Carvalho</b> — multiartista em Curitiba/PR e “defensora de uma vida mais colorida!”. Tattoo autoral, flashes e coberturas, no tamanho e estilo que for.</p>
+    <div class="hero__cta" data-in>
+      <a class="btn" href="#orcamento"><svg><use href="#wa"/></svg>Pedir orçamento</a>
+      <a class="btn btn--ghost" href="#legais">Ver as tattoos</a>
+    </div>
+  </div>
+  <div class="fan" aria-label="Tatuagens feitas pela Flavia">
+    <figure class="c1" data-stick><img src="img/legais-3.webp" width="864" height="1080" alt="Mandala colorida tatuada no braço, em tons de laranja, rosa, azul e verde"></figure>
+    <figure class="c2" data-stick><img src="img/pv-1.webp" width="864" height="1080" alt="Cobra com estampa de corações em vermelho e preto tatuada no antebraço"></figure>
+    <figure class="c3" data-stick><img src="img/legais-6.webp" width="864" height="1080" alt="Baleia azul com pontilhado e estrelas tatuada na perna, ao lado do desenho original"></figure>
+  </div>
+  <svg class="stk s1" data-spin><use href="#sak"/></svg>
+  <svg class="stk s2" data-spin><use href="#sak"/></svg>
+  <svg class="stk s3" data-spin><use href="#spk"/></svg>
+</section>
+
+<!-- ───────── quem é ───────── -->
+<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" style="background:#ffd0e0" aria-hidden="true"><path d="M0 34C150 4 260 58 420 34S700 2 860 30s230 26 340-6V60H0Z" fill="#e3f6f1"/></svg>
+<section class="about" id="flavia">
+  <div class="about__grid">
+    <figure class="about__pic" data-stick><img src="img/fla.webp" width="864" height="1080" loading="lazy" alt="Flavia Carvalho, tatuadora do Daedra, em arte do Instagram com o recado: qualquer dúvida, não deixe de perguntar. Um beijo, Fla"></figure>
+    <div>
+      <h2><span class="let let--teal" data-t="Oi, gente!" data-let>Oi, gente!</span></h2>
+      <p class="quote" data-up>“O Daedra é muito mais que um espaço: <b>é uma extensão de mim!</b> É o meu estúdio privado de tatuagem, e também dá o nome ao meu ateliê de arte, o @ateliedaedra.”</p>
+      <p class="quote" data-up style="margin-top:22px">“Eu, Flavia (não, Daedra não é o meu nome kkkkk) sou a…</p>
+      <ul class="jobs" id="jobs">
+        <li>proprietária</li><li>atendente</li><li>faxineira</li><li>fotógrafa</li><li>social media</li><li>artesã</li><li>vendedora</li><li>entregadora</li><li class="is">e também tatuadora</li>
+      </ul>
+      <p class="quote" data-up>…do estúdio hahaha 🥰💜”</p>
+      <div class="about__cols">
+        <div class="win" data-up>
+          <div class="win__bar"><span>de onde vem o nome</span><i></i><i></i><i></i></div>
+          <div class="win__body"><p>“Daedra (lê-se “da-é-dra”) vem do jogo de RPG Skyrim, que ocupou algumas centenas de horas da minha vida kkkkk...</p><p>Os “Daedras” são entidades sobrenaturais, agentes do caos e das mudanças, e operadores do karma. E é por conta deles que a logo do estúdio é um coração anatômico (entendedores entenderão! ❤️)”</p></div>
+        </div>
+        <div class="win win--mint" data-up>
+          <div class="win__bar"><span>onde fica</span><i></i><i></i><i></i></div>
+          <div class="win__body"><p>“Com 10 anos de existência, o estúdio já teve alguns endereços (…) e agora está no bairro <b>Capão da Imbuia - Curitiba/PR</b> 📍 em um cantinho super aconchegante e pensado para atender vocês da melhor forma possível!”</p></div>
+        </div>
+      </div>
+      <p class="src">Textos da Flavia, dos posts fixados no Instagram @daedracwb.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── carrossel 1 ───────── -->
+<section class="pano" id="legais" data-pano>
+  <div class="pano__stick">
+    <div class="pano__head">
+      <h2><small>Carrossel sem corte · do Instagram pra cá</small>“Tattoos legais que fiz nos últimos dias, de diferentes estilos e tamanhos!”</h2>
+      <span class="pano__n" aria-hidden="true">1/9</span>
+    </div>
+    <div class="pano__win" tabindex="0" aria-label="Carrossel de tatuagens: role para o lado">
+      <div class="pano__track">
+        <img src="img/legais-0.webp" width="864" height="1080" alt="Capa do carrossel: Tattoos legais que eu fiz nos últimos tempos, com o desenho de uma baleia azul">
+        <img src="img/legais-1.webp" width="864" height="1080" alt="Elefante ornamental com flores de lótus em preto e cinza e cor, cobrindo as costas; antes havia uma fada antiga">
+        <img src="img/legais-2.webp" width="864" height="1080" loading="lazy" alt="Antes e depois da cobertura: a fada antiga e o elefante com lótus finalizado">
+        <img src="img/legais-3.webp" width="864" height="1080" loading="lazy" alt="Mandala colorida no braço, vista de dois ângulos">
+        <img src="img/legais-4.webp" width="864" height="1080" loading="lazy" alt="Pequeninas tatuadas: caveira com flores, mariposa, cogumelos e baleia">
+        <img src="img/legais-5.webp" width="864" height="1080" loading="lazy" alt="Pequeninas de dragão e dinossauro astronauta, e reforma de flores de cerejeira no braço">
+        <img src="img/legais-6.webp" width="864" height="1080" loading="lazy" alt="Flash de baleia azul eternizado na pele, com pontilhado lilás e estrelas">
+        <img src="img/legais-7.webp" width="864" height="1080" loading="lazy" alt="Baleia azul já cicatrizada e antes e depois de uma mini reforma de cachorrinho">
+        <img src="img/legais-8.webp" width="864" height="1080" loading="lazy" alt="Fim do carrossel: Gostou? Então tatue comigo! Com o desenho da Flavia">
+        <div class="pano__end"><p>“Gosta do meu estilo de arte? Me chama na DM ou WhatsApp para pedir seu orçamento e agendar sua tattoo! 😍”</p><a class="btn" href="#orcamento"><svg><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </div>
+    </div>
+    <div class="pano__foot">
+      <div class="pano__dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="pano__hint"><span class="h-js">role a página — o carrossel anda sozinho →</span><span class="h-no">arraste para o lado →</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── flashes ───────── -->
+<section class="flash" id="flashes">
+  <div class="flash__in">
+    <div class="flash__top">
+      <h2><span class="let" data-t="Flashes" data-let>Flashes</span></h2>
+      <p class="quote" data-up>“Você pode pedir uma tattoo autoral ou tatuar um dos meus desenhos prontos, os flashes. Eles estão sempre disponíveis nos Destaques e eu estou sempre lançando novas “safras” de desenhos.”</p>
+    </div>
+    <div class="flash__grid">
+      <figure data-slap><img src="img/flash-0.webp" width="807" height="1000" loading="lazy" alt="Flashes: dragão com sakuras e flor de maracujá"></figure>
+      <figure data-slap><img src="img/flash-1.webp" width="807" height="1000" loading="lazy" alt="Flashes: besouro e tubarão-martelo estampados de azul"></figure>
+      <figure data-slap><img src="img/flash-2.webp" width="807" height="1000" loading="lazy" alt="Flashes: loba-coração e ramo de strelitzia"></figure>
+      <figure data-slap><img src="img/flash-3.webp" width="807" height="1000" loading="lazy" alt="Flashes: lobo com estrela turquesa e hipocampo turquesa"></figure>
+    </div>
+    <p class="src">“Flashes que eu quero MUITO que ganhem um lar! 😍” — post do Instagram. Tamanhos e valores escritos nas imagens são os daquele post: disponibilidade e preço atuais, só confirmando com a Flavia.</p>
+
+    <div class="peq">
+      <div class="peq__rule" id="rule">
+        <svg viewBox="0 0 430 196" role="img" aria-label="Régua: uma Pequenina tem 5,5 centímetros">
+          <circle id="peqc" cx="88.750" cy="88" r="68.750" fill="#fff" stroke="#2e1437" stroke-width="2.5" stroke-dasharray="7 7"/>
+          <text x="88.750" y="100" text-anchor="middle" font-family="Pacifico,cursive" font-size="34" fill="#d2176a">5,5 cm</text>
+          <path d="M176 60c26-16 50-14 70 4" fill="none" stroke="#12b0aa" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9"/>
+          <text x="258" y="84" font-family="Nunito,sans-serif" font-weight="800" font-size="15" fill="#2e1437">cabe aqui dentro</text>
+          <g id="ticks" stroke="#2e1437" stroke-width="2.2" stroke-linecap="round"></g>
+          <path d="M20 168H420" stroke="#2e1437" stroke-width="2.5" stroke-linecap="round"/>
+          <g id="nums" font-family="Nunito,sans-serif" font-weight="800" font-size="12.5" fill="#2e1437" text-anchor="middle"></g>
+        </svg>
+      </div>
+      <div data-up>
+        <h3>Pequeninas</h3>
+        <p>“Pequeninas que eu quero MUITO tatuar em VOCÊ 🫵🏻” — a série de flashes pequenos da Flavia, com 5,5 centímetros. As safras disponíveis ficam nos Destaques do Instagram.</p>
+        <button class="btn btn--teal" type="button" data-set="Pequenina (5,5 cm)">Quero uma Pequenina</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── carrossel 2 ───────── -->
+<section class="pano pano--red" id="vermelho" data-pano>
+  <div class="pano__stick">
+    <div class="pano__head">
+      <h2><small>Carrossel sem corte · em vermelho e preto</small>“Uma paixão chamada tattoos em preto e vermelho”</h2>
+      <span class="pano__n" aria-hidden="true">1/8</span>
+    </div>
+    <div class="pano__win" tabindex="0" aria-label="Carrossel de tatuagens em vermelho e preto: role para o lado">
+      <div class="pano__track">
+        <img src="img/pv-0.webp" width="864" height="1080" loading="lazy" alt="Capa do carrossel: Tattoos legais em vermelho e preto, dentro de um coração de renda">
+        <img src="img/pv-1.webp" width="864" height="1080" loading="lazy" alt="Cobra com corações vermelhos tatuada no antebraço">
+        <img src="img/pv-2.webp" width="864" height="1080" loading="lazy" alt="Baleias com estampa de corações no braço e cobra enrolada em formato de coração">
+        <img src="img/pv-3.webp" width="864" height="1080" loading="lazy" alt="Onça com manchas de coração e estrela tatuada no antebraço">
+        <img src="img/pv-4.webp" width="864" height="1080" loading="lazy" alt="Garça com fundo vermelho e cobra preta entre flores vermelhas">
+        <img src="img/pv-5.webp" width="864" height="1080" loading="lazy" alt="Dragão oriental com figura feminina de vestido vermelho no antebraço">
+        <img src="img/pv-6.webp" width="864" height="1080" loading="lazy" alt="Cavalo com crina de fogo, andorinha com sol vermelho e onça com corações">
+        <img src="img/pv-7.webp" width="864" height="1080" loading="lazy" alt="Fim do carrossel: Gostou? Então tatue comigo!">
+        <div class="pano__end"><p>“No tamanho e estilo que for ✨”</p><a class="btn" href="#orcamento" data-set-estilo="Preto e vermelho"><svg><use href="#wa"/></svg>Quero em vermelho e preto</a></div>
+      </div>
+    </div>
+    <div class="pano__foot">
+      <div class="pano__dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="pano__hint"><span class="h-js">continue rolando →</span><span class="h-no">arraste para o lado →</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── orçamento ───────── -->
+<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" style="background:#e9a3bb" aria-hidden="true"><path d="M0 30C170 60 300 4 470 28s260 30 420 6 220-20 310 4V60H0Z" fill="#e3f6f1"/></svg>
+<section class="orc" id="orcamento">
+  <div class="orc__in">
+    <div>
+      <h2><span class="let" data-t="Bora tatuar?" data-let>Bora tatuar?</span></h2>
+      <p class="orc__lead quote" data-up>“Para enviar um orçamento bem preciso, preciso das seguintes informações: descrição do desenho e estilo; imagens de referência; tamanho da tattoo em centímetros; parte do corpo em que a tattoo será feita.”</p>
+      <form id="form" novalidate>
+        <fieldset>
+          <legend>O que vai ser?</legend>
+          <div class="chips">
+            <label><input type="radio" name="tipo" value="Tattoo autoral" checked><span>Tattoo autoral</span></label>
+            <label><input type="radio" name="tipo" value="Flash disponível"><span>Flash disponível</span></label>
+            <label><input type="radio" name="tipo" value="Pequenina (5,5 cm)"><span>Pequenina</span></label>
+            <label><input type="radio" name="tipo" value="Cobertura ou reforma"><span>Cobertura ou reforma</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Estilo</legend>
+          <div class="chips">
+            <label><input type="radio" name="estilo" value="Colorida" checked><span>Colorida</span></label>
+            <label><input type="radio" name="estilo" value="Preto e vermelho"><span>Preto e vermelho</span></label>
+            <label><input type="radio" name="estilo" value="Preto e cinza"><span>Preto e cinza</span></label>
+            <label><input type="radio" name="estilo" value="Mandala"><span>Mandala</span></label>
+            <label><input type="radio" name="estilo" value="Floral"><span>Floral</span></label>
+            <label><input type="radio" name="estilo" value="Ainda não sei"><span>Ainda não sei</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Local do corpo</legend>
+          <div class="chips">
+            <label><input type="radio" name="local" value="Braço" checked><span>Braço</span></label>
+            <label><input type="radio" name="local" value="Antebraço"><span>Antebraço</span></label>
+            <label><input type="radio" name="local" value="Ombro"><span>Ombro</span></label>
+            <label><input type="radio" name="local" value="Costas"><span>Costas</span></label>
+            <label><input type="radio" name="local" value="Costela"><span>Costela</span></label>
+            <label><input type="radio" name="local" value="Perna"><span>Perna</span></label>
+            <label><input type="radio" name="local" value="Outro lugar"><span>Outro lugar</span></label>
+          </div>
+        </fieldset>
+        <div>
+          <label class="lbl" for="tam">Tamanho <small>(em centímetros, do jeito que ela pede)</small></label>
+          <div class="size"><input type="range" id="tam" min="3" max="30" step="1" value="12"><output id="tamv" for="tam">12 cm</output></div>
+        </div>
+        <div>
+          <label class="lbl" for="ideia">Descrição do desenho <small>(opcional)</small></label>
+          <textarea id="ideia" placeholder="Ex.: uma baleia com estrelas, parecida com a do carrossel"></textarea>
+        </div>
+      </form>
+    </div>
+    <aside class="orc__side">
+      <div class="win win--yel" data-up>
+        <div class="win__bar"><span>sua mensagem pra Flavia</span><i></i><i></i><i></i></div>
+        <div class="win__body">
+          <div class="bubble" id="msg" aria-live="polite"></div>
+          <a class="btn send" id="send" href="https://wa.me/5541998837314" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Enviar no WhatsApp</a>
+          <p class="note">Abre a conversa com o (41) 99883-7314. As imagens de referência você manda por lá. “Eu recebo +30 mensagens por dia (…) então peço um tiquinho de paciência tá bom~ 🥺”</p>
+        </div>
+      </div>
+      <div class="win" data-up>
+        <div class="win__bar"><span>vamos agendar!</span><i></i><i></i><i></i></div>
+        <div class="win__body">
+          <div class="hrs">
+            <div><span>Segunda à sexta</span><b>9h30 – 19h30</b></div>
+            <div><span>Sábado</span><b>9h – 17h30</b></div>
+          </div>
+          <p class="note" style="margin-top:10px">Primeiro e último horário de atendimento. “O atendimento é realizado somente com hora marcada!”</p>
+          <ul class="tips">
+            <li>“No dia da sessão, venha bem alimentada e descansada.”</li>
+            <li>“Hidratar bem sua pele antes da sessão é recomendado, e faz muita diferença!”</li>
+            <li>Cobertura de tattoo ou cicatriz? “É só enviar uma foto da tattoo antiga ou cicatriz, e também referências de desenho/temática que gostaria de tatuar!”</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ───────── avaliações ───────── -->
+<section class="rev" id="avaliacoes">
+  <div class="rev__in">
+    <div class="rev__top">
+      <h2><span class="let let--teal" data-t="Quem já tatuou" data-let>Quem já tatuou</span></h2>
+      <span class="rev__score" data-up><b>4,8</b> no Google · 118 avaliações</span>
+    </div>
+    <div class="rev__grid">
+      <blockquote data-pop>“Já tatuei duas vezes com a Flávia. Uma querida, tem a mão leve, atenciosa aos detalhes e muito gente boa. Não tenham dúvidas que ela é a pessoa certa pra você fazer a sua.”<cite>Fernando Garcel · Google</cite></blockquote>
+      <blockquote data-pop>“A Flávia entrou na minha vida assumindo um “desafio” que vários tatuadores negaram: complementar a tatuagem que eu tinha dos meus gatos. (…) Ela transformou algo que estava me gerando um certo incômodo em algo que eu sinto muito orgulho de mostrar.”<cite>Priscylla Dobbin · Google</cite></blockquote>
+      <blockquote data-pop>“Que energia! (…) Os desenhos dela são de uma delicadeza sem igual e o preço extremamente justo pro trabalho honroso que ela faz!”<cite>Tayná Dias · Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <h2><span class="let" data-t="Um beijo, Fla" data-let>Um beijo, Fla</span></h2>
+      <p>Daedra Tattoo — estúdio privado de tatuagem no Capão da Imbuia, Curitiba/PR. Atendimento somente com hora marcada.</p>
+    </div>
+    <ul>
+      <li><a href="https://wa.me/5541998837314" target="_blank" rel="noopener">WhatsApp (41) 99883-7314</a></li>
+      <li><a href="https://www.instagram.com/daedracwb/" target="_blank" rel="noopener">Instagram @daedracwb</a></li>
+      <li><a href="https://www.instagram.com/ateliedaedra/" target="_blank" rel="noopener">Ateliê de arte @ateliedaedra</a></li>
+    </ul>
+  </div>
+  <div class="foot__k"><span>Fotos, artes e textos: Instagram @daedracwb. Nota e avaliações: perfil do estúdio no Google.</span><span>Prévia criada pela <a href="https://kodratecnologia.com.br" target="_blank" rel="noopener">Kodra</a></span></div>
+</footer>
+
+<a class="btn fab" id="fab" href="#orcamento"><svg><use href="#wa"/></svg>Orçamento</a>
+
+<script src="assets/gsap.min.js"></script>
+<script src="assets/ScrollTrigger.min.js"></script>
+<script src="assets/lenis.min.js"></script>
+<script>
+(function(){
+  var W='5541998837314';
+  var form=document.getElementById('form'),msg=document.getElementById('msg'),send=document.getElementById('send'),ideia=document.getElementById('ideia'),tam=document.getElementById('tam'),tamv=document.getElementById('tamv'),lastTam=tam.value;
+  function val(n){var el=form.querySelector('input[name="'+n+'"]:checked');return el?el.value:''}
+  function update(){
+    var tipo=val('tipo'),peq=tipo.indexOf('Pequenina')===0;
+    if(peq){if(!tam.disabled)lastTam=tam.value;tam.disabled=true}else if(tam.disabled){tam.disabled=false;tam.value=lastTam}
+    var size=peq?'5,5 cm':tam.value+' cm'+(tam.value===tam.max?' ou mais':'');
+    tamv.textContent=peq?'5,5 cm':tam.value+' cm';
+    var lines=['Oi, Flavia! Vi o site do Daedra e quero um orçamento 💜','','O que vai ser: '+tipo,'Estilo: '+val('estilo'),'Local do corpo: '+val('local'),'Tamanho: '+size];
+    if(ideia.value.trim())lines.push('Descrição do desenho: '+ideia.value.trim());
+    lines.push('',tipo==='Cobertura ou reforma'?'Já mando por aqui a foto da tattoo antiga e as referências.':'Já mando as imagens de referência por aqui.');
+    var t=lines.join('\n');msg.textContent=t;send.href='https://wa.me/'+W+'?text='+encodeURIComponent(t);
+  }
+  function pick(name,v){var r=form.querySelector('input[name="'+name+'"][value="'+v+'"]');if(r){r.checked=true;update()}}
+  form.addEventListener('input',update);form.addEventListener('change',update);form.addEventListener('submit',function(e){e.preventDefault()});update();
+
+  /* régua das Pequeninas: 1 cm = 25 unidades do desenho */
+  (function(){var t='',n='';for(var i=0;i<=32;i++){var x=20+i*12.5,full=i%2===0;t+='<path d="M'+x+' 168V'+(full?152:160)+'"/>';if(i%4===0)n+='<text x="'+x+'" y="188">'+(i/2)+'</text>'}
+    document.getElementById('ticks').innerHTML=t;document.getElementById('nums').innerHTML=n})();
+
+  var fab=document.getElementById('fab');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(el){if(window.__lenis)window.__lenis.scrollTo(el,{offset:-34,duration:1.4});else window.scrollTo({top:el.getBoundingClientRect().top+scrollY-34,behavior:reduce?'auto':'smooth'})}
+  document.querySelectorAll('[data-set]').forEach(function(b){b.addEventListener('click',function(){pick('tipo',b.dataset.set);go(document.getElementById('orcamento'))})});
+  document.querySelectorAll('[data-set-estilo]').forEach(function(b){b.addEventListener('click',function(){pick('estilo',b.dataset.setEstilo)})});
+
+  /* contador dos carrosséis também no modo sem animação (arrastar com o dedo) */
+  var panos=[].slice.call(document.querySelectorAll('[data-pano]'));
+  function mark(sec,x){var imgs=sec.querySelectorAll('.pano__track img'),win=sec.querySelector('.pano__win'),w=imgs[0].getBoundingClientRect().width||1,n=imgs.length;
+    var i=Math.max(0,Math.min(n-1,Math.floor((x+win.clientWidth*.5-parseFloat(getComputedStyle(sec.querySelector('.pano__track')).paddingLeft))/w)));
+    sec.querySelectorAll('.pano__dots i').forEach(function(d,k){d.classList.toggle('on',k===i)});sec.querySelector('.pano__n').textContent=(i+1)+'/'+n}
+  var anim=window.gsap&&window.ScrollTrigger&&!reduce;
+  document.querySelectorAll('.h-js').forEach(function(e){e.hidden=!anim});document.querySelectorAll('.h-no').forEach(function(e){e.hidden=!!anim});
+  if(!anim){fab.classList.add('on');panos.forEach(function(sec){var win=sec.querySelector('.pano__win');win.addEventListener('scroll',function(){mark(sec,win.scrollLeft)},{passive:true})});return}
+
+  document.documentElement.classList.add('js');
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ignoreMobileResize:true});
+  if(window.Lenis){var lenis=window.__lenis=new Lenis({lerp:.1});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var el=document.querySelector(a.getAttribute('href'));if(!el)return;e.preventDefault();go(el)})});
+
+  /* lettering: o volume "cresce" como se fosse recortado e colado */
+  function letIn(el,delay){return gsap.fromTo(el,{'--ex':0,scale:.86,rotate:-3,opacity:0},{'--ex':1,scale:1,rotate:0,opacity:1,duration:.9,delay:delay||0,ease:'back.out(2.2)'})}
+  gsap.utils.toArray('[data-let]').forEach(function(el){
+    el.style.transformOrigin='20% 70%';
+    if(el.dataset.let==='load')return;
+    gsap.set(el,{opacity:0});
+    ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){letIn(el)}});
+  });
+
+  /* abertura */
+  var stick=gsap.utils.toArray('.fan [data-stick]');
+  gsap.set('[data-in]',{opacity:0,y:18});
+  gsap.set(stick,{opacity:0});
+  var tl=gsap.timeline({delay:.15});
+  tl.add(letIn(document.querySelector('[data-let="load"]')),0)
+    .to('[data-in]',{opacity:1,y:0,duration:.6,ease:'power2.out',stagger:.09},.35);
+  stick.forEach(function(f,i){tl.fromTo(f,{opacity:0,scale:1.35,rotate:'+='+(i%2?14:-14),y:-30},{opacity:1,scale:1,rotate:'-='+(i%2?14:-14),y:0,duration:.55,ease:'back.out(1.6)'},.45+i*.16)});
+  tl.from('.hero .stk',{scale:0,rotate:-120,duration:.7,ease:'back.out(2)',stagger:.1,transformOrigin:'50% 50%'},.8);
+  gsap.utils.toArray('[data-spin]').forEach(function(s,i){gsap.to(s,{rotate:(i%2?-1:1)*200,ease:'none',transformOrigin:'50% 50%',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}})});
+  stick.forEach(function(f,i){gsap.to(f,{yPercent:[-10,-22,-34][i],ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}})});
+
+  /* blocos que sobem; adesivos que "colam" */
+  gsap.utils.toArray('[data-up]').forEach(function(el){gsap.fromTo(el,{opacity:0,y:30},{opacity:1,y:0,duration:.8,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}})});
+  gsap.fromTo('.about__pic',{opacity:0,scale:1.2,rotate:6},{opacity:1,scale:1,rotate:-2.5,duration:.7,ease:'back.out(1.5)',scrollTrigger:{trigger:'.about',start:'top 78%',once:true}});
+  gsap.fromTo('#jobs li',{opacity:0,scale:0,y:10},{opacity:1,scale:1,y:0,duration:.45,ease:'back.out(2.6)',stagger:.11,scrollTrigger:{trigger:'#jobs',start:'top 86%',once:true},clearProps:'transform'});
+  ScrollTrigger.batch('[data-slap]',{start:'top 90%',once:true,onEnter:function(els){els.forEach(function(el,i){gsap.fromTo(el,{opacity:0,scale:1.3,y:-26},{opacity:1,scale:1,y:0,duration:.5,delay:i*.12,ease:'back.out(1.7)',clearProps:'transform,opacity'})})}});
+  gsap.set('[data-slap]',{opacity:0});
+  ScrollTrigger.batch('[data-pop]',{start:'top 90%',once:true,onEnter:function(els){els.forEach(function(el,i){gsap.fromTo(el,{opacity:0,scale:.7,y:24},{opacity:1,scale:1,y:0,duration:.55,delay:i*.12,ease:'back.out(1.8)',transformOrigin:'15% 100%'})})}});
+  gsap.set('[data-pop]',{opacity:0});
+  gsap.fromTo('#peqc',{scale:0,transformOrigin:'50% 50%'},{scale:1,duration:.8,ease:'back.out(1.6)',scrollTrigger:{trigger:'#rule',start:'top 86%',once:true}});
+
+  /* carrossel contínuo: a rolagem da página puxa o painel de lado */
+  panos.forEach(function(sec){
+    var st=sec.querySelector('.pano__stick'),win=sec.querySelector('.pano__win'),track=sec.querySelector('.pano__track');
+    function max(){return Math.max(0,track.scrollWidth-win.clientWidth)}
+    function size(){sec.style.height=Math.round(st.offsetHeight+max()*.72)+'px'}
+    size();ScrollTrigger.addEventListener('refreshInit',size);
+    gsap.to(track,{x:function(){return -max()},ease:'none',scrollTrigger:{trigger:sec,start:function(){return 'top '+34+'px'},end:'bottom bottom',scrub:.5,invalidateOnRefresh:true,onUpdate:function(s){mark(sec,s.progress*max())}}});
+  });
+
+  ScrollTrigger.create({trigger:'#flavia',start:'top 60%',endTrigger:'#orcamento',end:'top 80%',onToggle:function(s){fab.classList.toggle('on',s.isActive)}});
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ScrollTrigger.refresh()});
+})();
+</script>
+</body>
+</html>
